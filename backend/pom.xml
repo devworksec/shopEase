@@ -28,6 +28,7 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<java17.home>/Library/Java/JavaVirtualMachines/jdk-17.0.12.jdk/Contents/Home</java17.home>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -91,11 +92,6 @@
 		<dependency>
 			<groupId>com.stripe</groupId>
 			<artifactId>stripe-java</artifactId>
-			<version>26.5.1</version></dependency>
-
-		<dependency>
-			<groupId>com.stripe</groupId>
-			<artifactId>stripe-java</artifactId>
 			<version>26.5.1</version>
 		</dependency>
 	</dependencies>
@@ -114,6 +110,15 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-compiler-plugin</artifactId>
+	            <version>3.13.0</version> <!-- o una versión más reciente -->
+	            <configuration>
+	                <source>17</source>
+	                <target>17</target>
+	            </configuration>
+	        </plugin>
 		</plugins>
 	</build>
 
